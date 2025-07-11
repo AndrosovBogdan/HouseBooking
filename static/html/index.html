@@ -3,9 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>NeryhoMist — Купівля та оренда нерухомості</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/mist.png" type="image/x-icon">
 </head>
 <body>
+  <div class="welcome-screen" id="welcome">
+    <div class="welcome-content">
+      <img src="../images/mist.png" class="welcome-logo" alt="Логотип">
+      <h1 class="welcome-title">NeryhoMist</h1>
+      <p class="welcome-description">Платформа для купівлі та оренди нерухомості в Україні</p>
+      <button class="start-btn" id="start-btn">Почати пошук</button>
+    </div>
+  </div>
 
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="../images/mist.png" class="mist-logo">
+        <h1 class="logo-name">NeryhoMist</h1>
+      </div>
+      <div class="cart">
+        <img src="../images/cart.png" class="cart-icon"> <span>0</span>
+      </div>
+    </div>
+  </header>
+
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-modal-content">
+    <span class="close-cart">x</span>
+    <h2>Ваш кошик</h2>
+    <div id="cart-items"></div>
+    <div class="total">Сума замовлення: $<span id="cart-total">0</span></div>
+    <form id="checkout-form" class="checkout-form">
+      <h3>Оформлення замовлення</h3>
+      <input type="text" name="firstName" placeholder="Ім'я" required>
+      <input type="text" name="lastName" placeholder="Прізвище" required>
+      <input type="number" name="birthYear" placeholder="Рік народження" min="1930" max="2024" required>
+      <input type="tel" name="phone" placeholder="Номер телефону" required>
+      <input type="email" name="email" placeholder="Електронна пошта" required>
+      <button type="submit">Підтвердити замовлення</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="search-box">
+  <button id="search-btn"><img src="../images/loupe.png" class="loupe"></button>
+  <input type="text" id="search-input" placeholder="Пошук за назвою...">
+</div>
+
+<div class="cards">
+
+      <div class="card">
+        <div class="card-photo">
+          <div class="card-photo">
+          <div class="slider">
+            <img src="../images/senator/senator1.jpg" class="slide active" alt="photo 1">
+            <img src="../images/senator/senator2.jpg" class="slide" alt="photo 2">
+            <img src="../images/senator/senator3.jpg" class="slide" alt="photo 3">
+            <img src="../images/senator/senator4.jpg" class="slide" alt="photo 4">
+            <img src="../images/senator/senator5.jpg" class="slide" alt="photo 5">
+            <img src="../images/senator/senator6.jpg" class="slide" alt="photo 6">
+            <img src="../images/senator/senator7.jpg" class="slide" alt="photo 7">
+            <img src="../images/senator/senator8.jpg" class="slide" alt="photo 8">            
+            <button class="arrow left"><</button>
+            <button class="arrow right">></button>
+          </div>
+        </div>
+        </div>
+        <div class="card-info">
+          <div class="price">$ 50 000</div>
+          <div class="name">ЖК Senator</div>
+          <p class="description">ЖК "Сенатор", на етапі введення в експлуатацію, індивідуальне газове опалення(двоконтурний котел), відкритий балкон , засклена лоджія, гардеробна. На поверсі 3 квартири, ліфт спускається в підземний паркінг.</p>
+          <div class="card-filters"><span class="card-rooms"><img src="../images/room.png" class="room-icon">1 кімната</span> <span class="renovation"><img src="../images/renovation.png" class="renovation-icon">без ремонту</span></div>
+          <div class="location"><span class="floor"><img src="../images/stairs.png" class="stairs-icon">4 з 10</span> <span class="city">Руська, Чернівці</span></div>
+          <p class="add-btn">В кошик</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-photo">
+          <div class="card-photo">
+          <div class="slider">
+            <img src="../images/kromaxbud/kromax1.jpg" class="slide active" alt="photo 1">
+            <img src="../images/kromaxbud/kromax2.jpg" class="slide" alt="photo 2">
+            <img src="../images/kromaxbud/kromax3.jpg" class="slide" alt="photo 3">
+            <img src="../images/kromaxbud/kromax4.jpg" class="slide" alt="photo 4">
+            <img src="../images/kromaxbud/kromax5.jpg" class="slide" alt="photo 5">
+            <img src="../images/kromaxbud/kromax6.jpg" class="slide" alt="photo 6">            
+            <button class="arrow left"><</button>
+            <button class="arrow right">></button>
+          </div>
+        </div>
+        </div>
+        <div class="card-info">
+          <div class="price">$ 176 000</div>
+          <div class="name">ЖК KromaxBud</div>
+          <p class="description">Продаж 3-х кімнатної новобудови по вулиці Н.Кобринської. Загальна площа 87 м², кімнати роздільні, кухня 18 м². Переваги: Надійний забудовник KromaxBud, cвіжий якісний євроремонт, ідеальний поверх 2/5, нові меблі та побутова техніка, автономне газове опалення, тепла підлога Квартира цілком готова для проживання, обладнана всім необхідним.</p>
+          <div class="card-filters"><span class="card-rooms"><img src="../images/room.png" class="room-icon">3 кімнати</span> <span class="renovation"><img src="../images/renovation.png" class="renovation-icon">з ремонтом</span></div>
+          <div class="location"><span class="floor"><img src="../images/stairs.png" class="stairs-icon">2 з 5</span> <span class="city">Руська, Чернівці</span></div>
+          <p class="add-btn">В кошик</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-photo">
+          <div class="card-photo">
+          <div class="slider">
+            <img src="../images/sonyachna/son1.jpg" class="slide active" alt="photo 1">
+            <img src="../images/sonyachna/son2.jpg" class="slide" alt="photo 2">
+            <img src="../images/sonyachna/son3.jpg" class="slide" alt="photo 3">
+            <img src="../images/sonyachna/son4.jpg" class="slide" alt="photo 4">
+            <img src="../images/sonyachna/son5.jpg" class="slide" alt="photo 5">
+            <img src="../images/sonyachna/son6.jpg" class="slide" alt="photo 6">
+            <img src="../images/sonyachna/son7.jpg" class="slide" alt="photo 7">
+            <img src="../images/sonyachna/son8.jpg" class="slide" alt="photo 8">
+            <img src="../images/sonyachna/son9.jpg" class="slide" alt="photo 9">            
+            <button class="arrow left"><</button>
+            <button class="arrow right">></button>
+          </div>
+        </div>
+        </div>
+        <div class="card-info">
+          <div class="price">$ 260 000</div>
+          <div class="name">Сонячна вулиця</div>
+          <p class="description">Продається просторий двоповерховий будинок з великою ділянкою у затишному та спокійному районі. Ідеальний варіант для тих, хто шукає комфорт, простір і можливість завершити ремонт на свій смак. Будинок новий, з якісним фасадом та утепленням. Перший поверх частково з ремонтом — можна одразу облаштовуватись. Другий поверх підготовлений до завершального оздоблення.</p>
+          <div class="card-filters"><span class="card-rooms"><img src="../images/room.png" class="room-icon">5 кімнат</span> <span class="renovation"><img src="../images/renovation.png" class="renovation-icon">частковий ремонт</span></div>
+          <div class="location"><span class="floor"><img src="../images/stairs.png" class="stairs-icon">2-поверховий будинок</span> <span class="city">Сонячна, Івано-Франківськ</span></div>
+          <p class="add-btn">В кошик</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-photo">
+          <div class="card-photo">
+          <div class="slider">
+            <img src="../images/kvitkova/kvitkova1.jpg" class="slide active" alt="photo 1">
+            <img src="../images/kvitkova/kvitkova2.jpg" class="slide" alt="photo 2">
+            <img src="../images/kvitkova/kvitkova3.jpg" class="slide" alt="photo 3">
+            <img src="../images/kvitkova/kvitkova4.jpg" class="slide" alt="photo 4">
+            <img src="../images/kvitkova/kvitkova5.jpg" class="slide" alt="photo 5">
+            <img src="../images/kvitkova/kvitkova6.jpg" class="slide" alt="photo 6">
+            <img src="../images/kvitkova/kvitkova7.jpg" class="slide" alt="photo 7">
+            <img src="../images/kvitkova/kvitkova8.jpg" class="slide" alt="photo 8">         
+            <button class="arrow left"><</button>
+            <button class="arrow right">></button>
+          </div>
+        </div>
+        </div>
+        <div class="card-info">
+          <div class="price">$ 58 000</div>
+          <div class="name">Квіткова, 2</div>
+          <p class="description">Будинок з ремонтом і великою ділянкою – село Небрат, 15 соток Продається одноповерховий будинок площею 100 м² на рівній ділянці 15 соток. Зроблений якісний ремонт: дерев’яна вагонка, кахель, тепла підлога. У будинку 1 кімната, простора ванна, окрема більярдна зала. На території: - Мангальна зона з накриттям - Заїзд на кілька авто - доглянута ділянка з ландшафтним дизайном, правильної форми - двір викладений плиткою Комунікації підключені: електрика, вода, каналізація.</p>
+          <div class="card-filters"><span class="card-rooms"><img src="../images/room.png" class="room-icon">1 кімната</span> <span class="renovation"><img src="../images/renovation.png" class="renovation-icon">з ремонтом</span></div>
+          <div class="location"><span class="floor"><img src="../images/stairs.png" class="stairs-icon">1-поверховий будинок</span> <span class="city">Квіткова, Небрат</span></div>
+          <p class="add-btn">В кошик</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="full-footer">
+      <div class="upper-footer">
+        <div class="footer-logo">
+          <img src="../images/mist.png" class="mist-icon-footer">
+          <h3 style="color: white;" class="footer-name">NeryhoMist</h3>
+        </div>
+        <div class="socials">
+          <h4>Наші соцмережі: </h4>
+          <img src="../images/instagram.png" class="instagram">
+          <img src="../images/X.png" class="X">
+          <img src="../images/youtube.png" class="youtube">
+          <img src="../images/facebook.png" class="facebook">
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="about-us">  
+          <pre style="font-size: 14px;">
+            NeryhoMist — це зручна платформа для купівлі та оренди нерухомості.
+            Ми допомагаємо знайти ідеальний дім, квартиру або комерційне приміщення в будь-якому куточку України. 
+            Наш сервіс поєднує актуальні оголошення, зручні фільтри та простий інтерфейс,
+            щоб ви могли швидко і безпечно знайти будинок своєї мрії.
+          </pre>
+        </div>
+        <div>
+          <h4 style="text-align: center; font-weight: 30; font-size: 16px;">Зв'язатися: </h4>
+          <p style="font-size: 14px; text-align: center; margin-top: 5px;">+380683544935</p>
+          <p style="font-size: 14px;">androsovbogdan2009@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/script.js" defer></script>
 </body>
 </html>
